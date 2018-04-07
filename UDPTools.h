@@ -39,6 +39,7 @@ void send(string msg,string servAddress,string servPort,
 
 //recv()
 //receive a message from any port
+//return format:"message:sourcePort"
 //return "Timeout" if timeout
 string recv(unsigned short localPort)
 {
@@ -54,7 +55,12 @@ string recv(unsigned short localPort)
     if (recvMsgSize==-1) {
       return "Timeout";
     } else {
-      echoBuffer[recvMsgSize]='\0';
+      echoBuffer[recvMsgSize]=':';
+      string sourceStr=to_string(sourcePort);
+      for (int i=0;i<sourceStr.length();i++) {
+	echoBuffer[recvMsgSize+1+i]=sourceStr[i];
+      }
+      echoBuffer[recvMsgSize+1+sourceStr.length()]='\0';
       return echoBuffer;
     }
   }

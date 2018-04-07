@@ -44,7 +44,7 @@ using namespace std;
 static bool initialized = false;
 #endif
 
-const int responseTime = 5000;
+const int responseTime = 100;
 
 // SocketException Code
 
