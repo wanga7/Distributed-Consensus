@@ -20,10 +20,10 @@ Projects will be performed in a group of two. Grades will be based on the follow
 -->>How to compile, run and test the program:
 
 To compile inside the cloned the project directory:
-  $mkdir build
-  $cmake ..
-  $make
-  Afterwards, five executable name Ledger1 through Ledger5 will be created inside the build directory
+  - $mkdir build
+  - $cmake ..
+  - $make
+  - Afterwards, five executable name Ledger1 through Ledger5 will be created inside the build directory
   
 The command of running each executable is similar:
   for example, ./Ledger1 5000 4 5001 5002 5003 5004
