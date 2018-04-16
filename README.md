@@ -23,14 +23,14 @@ To compile inside the cloned the project directory:
   - $mkdir build
   - $cmake ..
   - $make
-  - Afterwards, five executable name Ledger1 through Ledger5 will be created inside the build directory
+Afterwards, five executable named Ledger1 through Ledger5 will be created inside the build directory.
   
--->>The command of running each executable is similar:
+The command of running each executable is similar:
   - for example, ./Ledger1 5000 4 5001 5002 5003 5004
-    - the first argument 5000 means that the port of Ledger1 will be assigned
-    - the second argument 4 means that this Ledger will have 4 neighbours which have been or will be started
+    - the first argument 5000 indicates the port of Ledger1 to be assigned
+    - the second argument 4 indicates that this Ledger will have 4 neighbours which have been or will be started
     - the following arguments indicate the ports that this Ledger's neighbours will use
-    - in this example, to start the remaining four Ledgers, you may open other 4 seperate terminals, cd into the right directories and type in commands respectively
+    - in this example, to start the remaining four Ledgers, you may open 4 other seperate terminals, cd into the right directories and type in commands respectively, for example
       - ./Ledger2 5001 4 5000 5002 5003 5004
       - ./Ledger3 5002 4 5000 5001 5003 5004
       - ./Ledger4 5003 4 5000 5001 5002 5004
@@ -39,5 +39,7 @@ To compile inside the cloned the project directory:
   
  -->>Interating with the Ledger:
   - after launched, this interactive shell supports three types of commands, C for credit(add money), D for debit(withdraw money), and Q for query
-    - a numerical number must follow right after the C and D type commands, for example, C100, D25, but Q(querying current balance does not)
-    - the system will then print out a message indicating on whether the transaction is successful
+    - a numerical value must follow right after the C or D type commands, for example, C100, D25, 
+    - Q does not need any other information following it
+    - the system will then print out a message indicating on whether the transaction is successful and then you can keep interacting with the shell
+    - The most important feature of this distributed system is that every transaction step is synthesized, which means if you credit money on one running process, the remaining running Ledgers will almost immediately see and update the change (if the transaction is successful), so that the entire system will always be in a consensus.
