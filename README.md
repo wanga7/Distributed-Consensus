@@ -36,3 +36,8 @@ To compile inside the cloned the project directory:
       - ./Ledger4 5003 4 5000 5001 5002 5004
       - ./Ledger5 5004 4 5000 5001 5002 5003
   - Note: to make it possible for a certain Ledger to synthesize with other running Ledgers upon launching, you can add argument R in the end of the command, for example, ./Ledger3 5002 4 5000 5001 5003 5004 R
+  
+ -->>Interating with the Ledger:
+  - after launched, this interactive shell supports three types of commands, C for credit(add money), D for debit(withdraw money), and Q for query
+    - a numerical number must follow right after the C and D type commands, for example, C100, D25, but Q(querying current balance does not)
+    - the system will then print out a message indicating on whether the transaction is successful
