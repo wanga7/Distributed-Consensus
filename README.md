@@ -25,7 +25,7 @@ To compile inside the cloned the project directory:
   - $make
   - Afterwards, five executable name Ledger1 through Ledger5 will be created inside the build directory
   
-The command of running each executable is similar:
+-->>The command of running each executable is similar:
   - for example, ./Ledger1 5000 4 5001 5002 5003 5004
     - the first argument 5000 means that the port of Ledger1 will be assigned
     - the second argument 4 means that this Ledger will have 4 neighbours which have been or will be started
@@ -35,4 +35,4 @@ The command of running each executable is similar:
       - ./Ledger3 5002 4 5000 5001 5003 5004
       - ./Ledger4 5003 4 5000 5001 5002 5004
       - ./Ledger5 5004 4 5000 5001 5002 5003
-  Note: to make it possible for a certain Ledger to synthesize with other running Ledgers upon launching, you can add argument R in the end of the command, for example, ./Ledger3 5002 4 5000 5001 5003 5004 R
+  - Note: to make it possible for a certain Ledger to synthesize with other running Ledgers upon launching, you can add argument R in the end of the command, for example, ./Ledger3 5002 4 5000 5001 5003 5004 R
