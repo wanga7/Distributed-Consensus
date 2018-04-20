@@ -1,5 +1,4 @@
-- Significance on
-- “Your Coffee Shop Doesn’t Use Two-Phase Commit”
+# Significance on “Your Coffee Shop Doesn’t Use Two-Phase Commit”
 
 In really world systems, sometimes maximizing throughput is put at a higher priority. Often, the optimization for throughput results in a concurrent and asynchronous processing model, so that requests aren’t necessarily completed in the same sequence in which they initiated.
 
