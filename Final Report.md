@@ -15,6 +15,9 @@ A classical problem in distributed computing is the task of agreeing on a data v
 
 In this project, we implemented a decentralized bank account ledger using the two-phase commit protocol on a single computer. The distributed computing idea used here is that there is no "central" database. That being said, this is a distributed system that maintains consistency using a simple consensus protocol, and all running instances in the system maintain the same piece of data.
 
+Here's a flowchart of our 2-phase-commit protocol:
+![graph](https://github.com/cs3281/final-project-Distributed-Wangs/blob/master/2pc_flowchart.JPG)
+
 # Implementations
 This project is written in C++. The project is implemented by having 5 running instances of the same program running on a single machine. UDP sockets are used to communicate with different processes, each of which with a unique port. The port of an instance and the ports of its 4 neighbors are provided during launch time through command line arguments. 
 
